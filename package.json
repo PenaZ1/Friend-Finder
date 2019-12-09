@@ -1,0 +1,23 @@
+{
+  "name": "friend-finder",
+  "version": "1.0.0",
+  "description": "In this activity, I'll build a compatibility-based \"FriendFinder\" application -- basically a dating app. This full-stack site will take in results from users' surveys, then compare their answers with those from other users.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Omitakura/Friend-Finder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Omitakura/Friend-Finder/issues"
+  },
+  "homepage": "https://github.com/Omitakura/Friend-Finder#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
