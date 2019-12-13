@@ -12,6 +12,7 @@ module.exports = function (app) {
             friendDifference: 1000
         };
         var userData = req.body;
+        console.log(userData, req.body);
         var userName = userData.name;
         var userScores = userData.scores;
 

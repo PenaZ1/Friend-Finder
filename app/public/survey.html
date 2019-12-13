@@ -140,7 +140,7 @@
             </select>
             <br />
             <br />
-            <button type="button" class="btn btn-primary btn-lg btn-block">Submit</button>
+            <button type="button" class="btn btn-primary btn-lg btn-block" id="submission">Submit</button>
             <br />
 
         </div>
@@ -170,7 +170,7 @@
         </div>
     </div>
     <script type="text/javascript">
-        $("#submit").on("click", function () {
+        $("#submission").on("click", function () {
             function validateForm() {
                 var isValid = true;
                 $(".form-control").each(function () {
@@ -185,7 +185,10 @@
                 var userData = {
                     name: $("#name").val(),
                     photo: $("#photo").val(),
-                    scores: [
+
+                };
+                const answers = {
+                    answers: [
                         $("q1").val(),
                         $("q2").val(),
                         $("q3").val(),
@@ -199,8 +202,8 @@
                     ]
                 };
                 var currentURL = window.location.origin;
-
-                $.post(currentURL + "/api/friends", userData, function (data) {
+                console.log(userData);
+                $.post(currentURL + "/api/friends", answers, function (data) {
                     $("#matchName").text(data.name);
                     $("#matchImg").attr("src", data.photo);
                     $("#resultsModal").modal("toggle");
