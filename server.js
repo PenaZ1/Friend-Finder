@@ -9,6 +9,9 @@ var port = process.env.PORT || 3000;
 
 //body parser
 app.use(express.json());
+app.use(express.urlencoded({
+    extended: true
+}));
 // app.use(bodyParser.text());
 // app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 

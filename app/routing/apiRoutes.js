@@ -14,7 +14,7 @@ module.exports = function (app) {
         var userData = req.body;
         console.log(userData, req.body);
         var userName = userData.name;
-        var userScores = userData.scores;
+        var userScores = userData.answers;
 
         var b = userScores.map(function (item) {
             return parseInt(item, 10);
